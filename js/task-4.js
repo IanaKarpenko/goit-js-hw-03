@@ -34,7 +34,7 @@ const countTotalSalary = function(employees) {
   const salaries = Object.values(employees);
   let allSalaries = 0;
   for (const salary of salaries) {
-    allSalaries += Number(salary);
+    allSalaries += salary;
   }
   return allSalaries;
 };

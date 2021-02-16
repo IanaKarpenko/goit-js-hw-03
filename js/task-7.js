@@ -153,7 +153,9 @@ const account = {
    */
     getTransactionTotal(type) {
         let totalTrans = 0;
-        if (type === 'DEPOSIT') {
+        if (type === 'DEPOSIT') {   // я не поняла данной поправки. Передается тип транзации, как в данном случае переписать
+                                    // условие иначе, чтобы из различать?
+                                    // Кажется, я и так использую далее свойства объекта, что вы имели в виду?
             for (const obj of this.transactions) {
                 totalTrans += obj.DEPOSIT;
             }

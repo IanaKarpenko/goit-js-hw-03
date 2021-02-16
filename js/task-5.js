@@ -34,7 +34,10 @@ const products = [
 const getAllPropValues = function(arr, prop) {
     const resultArr = [];
     for (const obj of arr) {
-        if (obj[prop]) {
+      if (obj[prop]) {  // это проверка на null или undefined, почему вы отметили как ошибку? Если убрать как вы показали в скриншоте, то в 
+                        // последней проверке будет массив из четырех undefined, что не есть пустой массив
+                        // а в моем случае аутпут правильный, и в массив ничего не кладется.
+                        // Вопрос: это в задании неточность? 
             resultArr.push(obj[prop]);
         }
     }
